@@ -10,7 +10,11 @@ namespace AbstractFactory_Sample
 
             factory.GerarNotificacao(string.Empty, string.Empty);
 
-            Console.WriteLine("Hello World!");
+            ISmsFactory factory1 = new SmsFactory();
+
+            factory1.GerarNotificacao(string.Empty, string.Empty);
+
+            Console.ReadKey();
         }
     }
 }
