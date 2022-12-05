@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AbstractFactory_Sample
 {
-    public interface IEmailFactory : IFactory
+    public interface INotificacaoFactory : IFactory
     {
     }
 }

@@ -2,7 +2,7 @@
 
 namespace AbstractFactory_Sample
 {
-    public class SmsFactory : NotificacaoFactory, ISmsFactory
+    public class SmsFactory : NotificacaoFactory, INotificacaoFactory
     {
         public SmsFactory()
         {

@@ -6,13 +6,13 @@ namespace AbstractFactory_Sample
     {
         static void Main(string[] args)
         {
-            IEmailFactory factory = new EmailFactory();
+            INotificacaoFactory emailNotificacao = new EmailFactory();
 
-            factory.GerarNotificacao(string.Empty, string.Empty);
+            emailNotificacao.GerarNotificacao(string.Empty, string.Empty);
 
-            ISmsFactory factory1 = new SmsFactory();
+            INotificacaoFactory smsNotificacao = new SmsFactory();
 
-            factory1.GerarNotificacao(string.Empty, string.Empty);
+            smsNotificacao.GerarNotificacao(string.Empty, string.Empty);
 
             Console.ReadKey();
         }

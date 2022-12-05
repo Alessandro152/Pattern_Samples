@@ -2,7 +2,7 @@
 
 namespace AbstractFactory_Sample
 {
-    public class EmailFactory : NotificacaoFactory, IEmailFactory
+    public class EmailFactory : NotificacaoFactory, INotificacaoFactory
     {
         public EmailFactory()
         {
