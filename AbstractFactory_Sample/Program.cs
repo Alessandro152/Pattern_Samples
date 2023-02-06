@@ -6,13 +6,34 @@ namespace AbstractFactory_Sample
     {
         static void Main(string[] args)
         {
-            INotificacaoFactory emailNotificacao = new EmailFactory();
+            /* O objetivo deste projeto é contextualizar como funciona o padrão de projeto Factory, no caso, abstract factory.
+               Através das interfaces, garantimos o contrato de criar uma instância de uma marca de veículo e assim iniciar a 
+               montagem do mesmo.
+                
+               O atrativo do padrão factory é para situações onde temos a criação de "produtos" que possuem uma base em comum, neste caso
+               um veículo.
+            */
 
-            emailNotificacao.GerarNotificacao(string.Empty, string.Empty);
+            //Informar marca
+            Console.WriteLine("Informe a marca do veículo");
+            var marca = Console.ReadLine();
 
-            INotificacaoFactory smsNotificacao = new SmsFactory();
+            //Informar modelo
+            Console.WriteLine("Informe o modelo do veículo");
+            var modelo = Console.ReadLine();
 
-            smsNotificacao.GerarNotificacao(string.Empty, string.Empty);
+            //Criar instancia da marca
+            IVeiculoFactory factory = new VeiculoFactory();
+            var produto = factory.CriarInstanciaMontagemVeiculo(marca).Result;
+
+            if (produto is null)
+            {
+                Console.WriteLine("Marca não identificada");
+                Environment.Exit(0);
+            }
+
+            //Iniciar produção do veículo
+            produto.IniciarMontagemVeiculo(modelo);
 
             Console.ReadKey();
         }

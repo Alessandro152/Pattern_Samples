@@ -1,9 +1,10 @@
-﻿using System.Threading.Tasks;
+﻿using AbstractFactory_Sample.Interface;
+using System.Threading.Tasks;
 
 namespace AbstractFactory_Sample
 {
     public interface IFactory
     {
-        Task GerarNotificacao(string origem, string destino);
+        Task<ICarAssemblyBase> CriarInstanciaMontagemVeiculo(string marca);
     }
 }
