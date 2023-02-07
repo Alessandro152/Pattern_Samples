@@ -1,16 +1,13 @@
-﻿using System;
-
-namespace Builder_Sample
+﻿namespace Builder_Sample
 {
     class Program
     {
         static void Main(string[] args)
         {
-            var coffee = CoffeeBuilder.Start(new Coffee())
-                                      .Build("expresso");
-
-            Console.WriteLine($"Your coffee has been done!!");
-            Console.ReadKey();
+            /*
+             Método builder utilizado quando já temos um objeto complexo criado e vamos adicionar itens à ele
+            */
+            new VolkswagenAssemblyBuilder("1600", "L102", "standard").Build();
         }
     }
 }
