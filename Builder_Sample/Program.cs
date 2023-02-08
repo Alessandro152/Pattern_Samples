@@ -7,7 +7,7 @@
             /*
              Método builder utilizado quando já temos um objeto complexo criado e vamos adicionar itens à ele
             */
-            new VolkswagenAssemblyBuilder("1600", "L102", "standard").Build();
+            VolkswagenAssemblyBuilder.Start("1600", "L102", "standard").Build();
         }
     }
 }

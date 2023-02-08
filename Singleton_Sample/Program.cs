@@ -6,8 +6,9 @@ namespace Singleton_Sample
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-
+            /* O objetivo deste padrão de projeto é criar uma única instância a ser utilizada durante o runtime
+             * da aplicação e, ao finalizá-la, ser descartada
+             */
             Singleton.GetInstance();
             Console.WriteLine(Singleton.Instancia);
 

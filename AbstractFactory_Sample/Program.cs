@@ -6,11 +6,11 @@ namespace AbstractFactory_Sample
     {
         static void Main(string[] args)
         {
-            /* O objetivo deste projeto é contextualizar como funciona o padrão de projeto Factory, no caso, abstract factory.
-               Através das interfaces, garantimos o contrato de criar uma instância de uma marca de veículo e assim iniciar a 
+            /* O objetivo deste padrão de projeto é, através de interfaces, garantir o contrato de criar uma 
+               "fábrica" que devolva um "produto", no caso, uma instância de uma marca de veículo e assim iniciar a 
                montagem do mesmo.
                 
-               O atrativo do padrão factory é para situações onde temos a criação de "produtos" que possuem uma base em comum, neste caso
+               O atrativo do padrão factory é para situações onde temos a criação de "produtos" que possuem uma base em comum, que neste caso,
                um veículo.
             */
 
@@ -24,7 +24,7 @@ namespace AbstractFactory_Sample
 
             //Criar instancia da marca
             IVeiculoFactory factory = new VeiculoFactory();
-            var produto = factory.CriarInstanciaMontagemVeiculo(marca).Result;
+            var produto = factory.CriarInstanciaMontagemVeiculo(marca);
 
             if (produto is null)
             {

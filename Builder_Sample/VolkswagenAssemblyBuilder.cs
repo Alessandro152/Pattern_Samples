@@ -1,13 +1,18 @@
 ﻿namespace Builder_Sample
 {
-    public class VolkswagenAssemblyBuilder : VehicleBuilder
+    public sealed class VolkswagenAssemblyBuilder : VehicleBuilder
     {
-        public VolkswagenAssemblyBuilder(string motor,
-                                         string cor,
-                                         string rodas)
+        private VolkswagenAssemblyBuilder()
         {
-            Start(motor, cor, rodas);
         }
+
+        public static VolkswagenAssemblyBuilder Start(string motor, string cor, string rodas)
+            => new VolkswagenAssemblyBuilder
+            {
+                Engine = motor,
+                Color = cor,
+                Wheels = rodas
+            };
 
         public void Build()
         {

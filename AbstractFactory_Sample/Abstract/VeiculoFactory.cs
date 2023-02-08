@@ -1,5 +1,4 @@
 ﻿using AbstractFactory_Sample.Interface;
-using System.Threading.Tasks;
 
 namespace AbstractFactory_Sample
 {
@@ -14,7 +13,7 @@ namespace AbstractFactory_Sample
         /// </summary>
         /// <param name="marca"></param>
         /// <returns>Uma instância de marca de veículo para iniciar a montagem</returns>
-        public Task<ICarAssemblyBase> CriarInstanciaMontagemVeiculo(string marca)
+        public ICarAssemblyBase CriarInstanciaMontagemVeiculo(string marca)
         {
             /*
              * No exemplo temos apenas um swtich criando a instância de uma marca a partir
@@ -23,24 +22,24 @@ namespace AbstractFactory_Sample
              * Numa situação real, aqui caberiam lógicas de negócio para criação da instância.
              */
 
-            ICarAssemblyBase result = null;
+            ICarAssemblyBase instancia = null;
 
             switch (marca.ToLower())
             {
                 case "volkswagen":
-                    result = new Volkswagen();
+                    instancia = new Volkswagen();
                     break;
                 case "ford":
-                    result = new Ford();
+                    instancia = new Ford();
                     break;
                 case "fiat":
-                    result = new Fiat();
+                    instancia = new Fiat();
                     break;  
                 default:
                     break;
             }
 
-            return Task.FromResult(result);
+            return instancia;
         }
     }
 }
