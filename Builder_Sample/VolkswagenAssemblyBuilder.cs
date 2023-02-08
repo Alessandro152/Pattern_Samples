@@ -1,4 +1,6 @@
-﻿namespace Builder_Sample
+﻿using System;
+
+namespace Builder_Sample
 {
     public sealed class VolkswagenAssemblyBuilder : VehicleBuilder
     {
@@ -14,11 +16,28 @@
                 Wheels = rodas
             };
 
-        public void Build()
+        public Volkswagen Build()
+            => new Volkswagen(AddEngine(), AddColor(), AddWheels());
+
+        protected override string AddColor()
         {
-            AddColor();
-            AddEngine();
-            AddWheels();
+            //Alguma lógica para adicionar a cor ao veículo
+            Console.WriteLine($"Pintando o veículo na cor {Color}");
+            return Color;
+        }
+
+        protected override string AddEngine()
+        {
+            //Alguma lógica para adicionar o motor ao veículo
+            Console.WriteLine($"Instalando o motor {Engine} ao veículo");
+            return Engine;
+        }
+
+        protected override string AddWheels()
+        {
+            //Alguma lógica para adicionar as rodas ao veículo
+            Console.WriteLine($"Instalando as rodas {Wheels} no veículo");
+            return Wheels;
         }
     }
 }

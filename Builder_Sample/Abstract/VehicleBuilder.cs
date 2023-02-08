@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Builder_Sample
+﻿namespace Builder_Sample
 {
     public abstract class VehicleBuilder
     {
@@ -8,13 +6,8 @@ namespace Builder_Sample
         protected string Color { get; set; }
         protected string Wheels { get; set; }
 
-        protected void AddColor()
-            => Console.WriteLine($"Pintando o carro com a cor {Color}");
-
-        protected void AddEngine()
-            => Console.WriteLine($"Equipando o carro com o motor {Engine}");
-
-        protected void AddWheels()
-            => Console.WriteLine($"Instalando as rodas {Wheels}");
+        protected abstract string AddColor();
+        protected abstract string AddEngine();
+        protected abstract string AddWheels();
     }
 }

@@ -1,4 +1,6 @@
-﻿namespace Builder_Sample
+﻿using System;
+
+namespace Builder_Sample
 {
     class Program
     {
@@ -7,7 +9,9 @@
             /*
              Método builder utilizado quando já temos um objeto complexo criado e vamos adicionar itens à ele
             */
-            VolkswagenAssemblyBuilder.Start("1600", "L102", "standard").Build();
+            var result = VolkswagenAssemblyBuilder.Start("1600", "L102", "Standard").Build();
+
+            Console.WriteLine($"Pronto! Seu veículo com motor {result.Motor}, de cor {result.Cor} e rodas {result.Rodas} está disponível.");
         }
     }
 }
