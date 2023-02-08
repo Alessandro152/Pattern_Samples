@@ -5,8 +5,4 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Builder_Sample\Builder_Sample.csproj" />
-  </ItemGroup>
-
 </Project>
