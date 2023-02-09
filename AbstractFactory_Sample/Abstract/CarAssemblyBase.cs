@@ -4,6 +4,6 @@ namespace AbstractFactory_Sample.Abstract
 {
     public abstract class CarAssemblyBase : ICarAssemblyBase
     {
-        public abstract void IniciarMontagemVeiculo(string destino);
+        public abstract void IniciarMontagemVeiculo(string modelo, string cor, string motor, string rodas);
     }
 }

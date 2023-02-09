@@ -7,7 +7,7 @@ namespace Builder_Sample
         static void Main(string[] args)
         {
             /*
-             Método builder utilizado quando já temos um objeto complexo criado e vamos adicionar itens à ele
+             Método builder utilizado quando já temos um objeto complexo criado e vamos adicionar itens a ele
             */
             var result = VolkswagenAssemblyBuilder.Start("1600", "L102", "Standard").Build();
 

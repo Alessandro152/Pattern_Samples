@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Adapter_Sample\Adapter_Sample.csproj" />
+    <ProjectReference Include="..\Builder_Sample\Builder_Sample.csproj" />
   </ItemGroup>
 
 </Project>

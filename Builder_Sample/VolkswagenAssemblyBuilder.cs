@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AbstractFactory_Sample;
+using System;
 
 namespace Builder_Sample
 {
@@ -16,8 +17,8 @@ namespace Builder_Sample
                 Wheels = rodas
             };
 
-        public Volkswagen Build()
-            => new Volkswagen(AddEngine(), AddColor(), AddWheels());
+        public VolkswagenBuild Build()
+            => new VolkswagenBuild(AddEngine(), AddColor(), AddWheels());
 
         protected override string AddColor()
         {

@@ -1,8 +1,8 @@
 ﻿namespace Builder_Sample
 {
-    public sealed class Volkswagen
+    public sealed class VolkswagenBuild
     {
-        public Volkswagen(string motor, string cor, string rodas)
+        public VolkswagenBuild(string motor, string cor, string rodas)
         {
             Motor = motor;
             Cor = cor;

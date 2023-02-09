@@ -22,6 +22,18 @@ namespace AbstractFactory_Sample
             Console.WriteLine("Informe o modelo do veículo");
             var modelo = Console.ReadLine();
 
+            //Informar cor
+            Console.WriteLine("Informe a cor do veículo");
+            var cor = Console.ReadLine();
+
+            //Informar motor
+            Console.WriteLine("Informe a motorização do veículo");
+            var motor = Console.ReadLine();
+
+            //Informar rodas
+            Console.WriteLine("Informe as rodas do veículo");
+            var rodas = Console.ReadLine();
+
             //Criar instancia da marca
             IVeiculoFactory factory = new VeiculoFactory();
             var produto = factory.CriarInstanciaMontagemVeiculo(marca);
@@ -33,7 +45,7 @@ namespace AbstractFactory_Sample
             }
 
             //Iniciar produção do veículo
-            produto.IniciarMontagemVeiculo(modelo);
+            produto.IniciarMontagemVeiculo(modelo, cor, motor, rodas);
 
             Console.ReadKey();
         }
